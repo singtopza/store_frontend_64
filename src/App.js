@@ -5,16 +5,16 @@ import AddProduct from "./pages/AddProduct.js";
 import EditProduct from "./pages/EditProduct.js";
 import ErrorPage from "./pages/ErrorPage.js";
 import Menu from "./components/Menu.js";
-
 function App() {
   return (
     <Router>
+    {/* <Router basename="/store-frontend-64"> */}
       <Menu />
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/add" element={<AddProduct />}/>
         <Route path="/edit/:id" element={<EditProduct />}/>
-        <Route path="" element={<ErrorPage />}/>
+        <Route path="*" element={<ErrorPage />}/>
       </Routes>
     </Router>
   );

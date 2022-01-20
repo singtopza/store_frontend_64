@@ -13,6 +13,7 @@ function ProductList() {
   const [products, setProducts] = useState([]);
   const updateProduct = () => {
     axios
+    // .get("https://product-api-027.herokuapp.com/api/products/")
     .get(`${process.env.DOMAIN_NAME}/api/products/`)
     .then((response) => {
       setProducts(response.data);
