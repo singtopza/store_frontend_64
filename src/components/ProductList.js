@@ -4,10 +4,10 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import swal from "sweetalert";
-import dotenv from "dotenv";
-import cors from "cors";
+// import dotenv from "dotenv";
+// import cors from "cors";
 
-dotenv.config();
+// dotenv.config();
 
 function ProductList() {
   const [products, setProducts] = useState([]);
