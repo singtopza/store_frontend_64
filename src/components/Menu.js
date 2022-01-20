@@ -1,11 +1,10 @@
 // import React, { Component } from 'react';
-import React from 'react';
-import { useState } from 'react/cjs/react.development';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import React, { useState } from 'react'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 
 function Menu() {
     
-    const [isOpen, setIsOpen] = useState();
+    const [isOpen, setIsOpen] = useState(false);
     const toggle = () =>setIsOpen(!isOpen);
 
     return (
