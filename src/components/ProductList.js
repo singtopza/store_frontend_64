@@ -34,7 +34,7 @@ function ProductList() {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`${process.env.DOMAIN_NAME}/api/products//api/products/` + product._id)
+          .delete(`${process.env.DOMAIN_NAME}/api/products/` + product._id)
           .then((response) => {
             console.log(response.data);
             updateProduct();
