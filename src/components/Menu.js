@@ -15,7 +15,7 @@ function Menu() {
                 <Collapse isOpen= {isOpen} navbar>
                     <Nav className='mr-auto' navbar>
                         <NavItem>
-                            <NavLink href='/home'>Product List</NavLink>
+                            <NavLink href='/'>Product List</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href='/add'>Add new product</NavLink>
