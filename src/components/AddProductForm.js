@@ -105,7 +105,7 @@ function AddProductForm() {
             imageURL:URL,
         }
         //call API
-        axios.post(`${process.env.DOMAIN_NAME}/api/products/`, param).then((response)=>{
+        axios.post(`https://product-api-027.herokuapp.com/api/products/`, param).then((response)=>{
             console.log(response.data);
             //setProduct(initProductState);
             setSubmitted(true);

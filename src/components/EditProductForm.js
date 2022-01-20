@@ -21,7 +21,7 @@ function EditProductForm({ id }) {
       const [product, setProduct] = useState(initProductState);
       const [submitted,setSubmitted] = useState(false);
       useEffect(()=>{
-          axios.get(`${process.env.DOMAIN_NAME}/api/products/` +id).then((response)=>{
+          axios.get(`https://product-api-027.herokuapp.com/api/products/` +id).then((response)=>{
             setProduct(response.data);
           })
       }, [id])
@@ -42,7 +42,7 @@ function EditProductForm({ id }) {
           tags: product.tags,
         };
         axios
-          .put(`${process.env.DOMAIN_NAME}/api/products/`+product._id, param)
+          .put(`https://product-api-027.herokuapp.com/api/products/`+product._id, param)
           .then((response) => {
             console.log(response.data);
             setProduct({...product, })

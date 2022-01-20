@@ -4,10 +4,10 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import swal from "sweetalert";
-// import dotenv from "dotenv";
-// import cors from "cors";
+import dotenv from "dotenv";
+import cors from "cors";
 
-// dotenv.config();
+dotenv.config();
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -34,7 +34,7 @@ function ProductList() {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`${process.env.DOMAIN_NAME}/api/products/` + product._id)
+          .delete(`https://product-api-027.herokuapp.com/api/products/` + product._id)
           .then((response) => {
             console.log(response.data);
             updateProduct();
